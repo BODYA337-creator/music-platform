@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% {
+        width: 95px; /* Default width */
+    }
+
+    50% {
+        width: 115px; /* Expanded width */
+    }
+
+    100% {
+        width: 95px; /* Back to default */
+    }
+}
+
+.song-item .front-img {
+    width: 80px;
+    height: 80px;
+    border: solid black 3px;
+}
+
+.song-item .title {
+    display: flex;
+    width: 105px;
+    height: 86px;
+    margin-left: 3px;
+    justify-content: center;
+}
+
+.song-item {
+    display: flex;
+}
+
+.song-item .title div {
+    display: flex;
+    color: black;
+    font-size: 15px;
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    /* margin: 0 0 5px 7px; */
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.song-item a {
+    text-decoration: none;
+    display: flex;
+}
+
+.songs-items {
+    background-color: lightgray;
+    width: 200px;
+    padding: 0.5%;
+    border-right: solid rgb(54, 54, 54) 5px;
+    overflow-y: scroll;
+    border: solid black 3px;
+    margin: 5px;
+}
+
+hr {
+    height: 3px;
+    margin: 20px 0;
+    background-color: black;
+    border: unset;
+    width: 100%;
+}
+
+.publish-button {
+    position: fixed;
+    bottom: 1.5%;
+    right: 1.5%;
+    animation: pulse infinite ease-in-out 1.5s;
+}
+
+.add-to-favorites-button {
+    width: 25px;
+    height: 25px;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+.songs-items > div:nth-child(15) > a > .title {
+    margin-bottom: 7px;
+}
+
+@media (min-width: 700px) and (min-height: 500px) {
+    .song-item .front-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .songs-items {
+        width: 290px;
+    }
+    .song-item .title {
+        width: 136px;
+        height: 136px;
+        margin-left: 3px;
+    }
+
+    .songs-items > div:nth-child(15) > a > .title {
+        margin-bottom: 5px;
+    }
+
+    .song-item { 
+        width: 272px;
+    }
+
+    .song-item .title div {
+        color: black;
+        font-size: large;
+    }
+
+    @keyframes pulse {
+        0% {
+            /* height: 55px; */
+            width: 162px;
+        }
+    
+        50% {
+            /* height: 85px; */
+            width: 189px;
+        }
+    
+        100% {
+            /* height: 55px; */
+            width: 162px;
+        }
+    }
+}
