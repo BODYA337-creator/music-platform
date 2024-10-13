@@ -143,6 +143,27 @@ body {
     pointer-events: none;
 }
 
+.controls-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.replay-button img {
+    width: var(--buttons-img-size);
+    height: var(--buttons-img-size);
+    pointer-events: none;
+}
+
+.replay-button {
+    width: var(--buttons-size);
+    height: var(--buttons-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 #play-button img {
     margin-left: 6.5px;
 }
