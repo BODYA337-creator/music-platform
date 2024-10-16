@@ -31,7 +31,7 @@ function playAudio() {
         playButton.children[0].style.marginLeft = '0px';
         disk.style.left = '40%';
         if (window.innerWidth <= 700) {
-            disk.parentElement.style.marginRight = '13%';
+            disk.parentElement.style.marginRight = '15%';
         }
         disk.classList.add("disk-active");
     } else {
