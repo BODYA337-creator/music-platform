@@ -8,6 +8,8 @@ const stopButton = document.querySelector("#stop-button");
 
 const playButton = document.querySelector("#play-button");
 
+const seekBar = document.querySelector('#seekBar');
+
 let buttonState = false;
 
 window.onload = () => {
@@ -71,6 +73,16 @@ stopButton.addEventListener('click', function () {
     if (window.innerWidth <= 700) {
         disk.parentElement.style.marginRight = '0';
     }
+});
+
+audio.addEventListener('timeupdate', () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    seekBar.value = progress;
+});
+
+seekBar.addEventListener('input', () => {
+    const seekTime = (seekBar.value / 100) * audio.duration;
+    audio.currentTime = seekTime;
 });
 
 document.addEventListener('keydown', function(event) {
