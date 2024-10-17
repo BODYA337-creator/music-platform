@@ -8,7 +8,7 @@ const stopButton = document.querySelector("#stop-button");
 
 const playButton = document.querySelector("#play-button");
 
-const seekBar = document.querySelector('#seekBar');
+// const seekBar = document.querySelector('#seekBar');
 
 let buttonState = false;
 
@@ -78,15 +78,15 @@ stopButton.addEventListener('click', function () {
     }
 });
 
-audio.addEventListener('timeupdate', () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    seekBar.value = progress;
-});
+// audio.addEventListener('timeupdate', () => {
+//     const progress = (audio.currentTime / audio.duration) * 100;
+//     seekBar.value = progress;
+// });
 
-seekBar.addEventListener('input', () => {
-    const seekTime = (seekBar.value / 100) * audio.duration;
-    audio.currentTime = seekTime;
-});
+// seekBar.addEventListener('input', () => {
+//     const seekTime = (seekBar.value / 100) * audio.duration;
+//     audio.currentTime = seekTime;
+// });
 
 document.addEventListener('keydown', function(event) {
     if (event.code === 'Space') {
