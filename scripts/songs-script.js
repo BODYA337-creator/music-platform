@@ -12,16 +12,19 @@ const seekBar = document.querySelector('#seekBar');
 
 let buttonState = false;
 
-window.onload = () => {
+window.addEventListener('resize', function () {
     const controlsHeight = parseFloat(window.getComputedStyle(document.querySelector('.controls')).getPropertyValue("height")) + 7;
     const diskContainerHeight = parseFloat(window.getComputedStyle(document.querySelector('.disk-container')).getPropertyValue("height")) + 3;
     
-    text.style.height = `${window.innerHeight - (controlsHeight + diskContainerHeight)}px`;
+    text.style.height = `${window.innerHeight - (controlsHeight + diskContainerHeight)}px`; 
+})
 
-    // if (window.innerWidth <= 700) {
-    //     disk.parentElement.style.margin = `0 ${(window.innerWidth - 360) / 2}px`;
-    // }    
-};
+window.addEventListener('load', function () {
+    const controlsHeight = parseFloat(window.getComputedStyle(document.querySelector('.controls')).getPropertyValue("height")) + 7;
+    const diskContainerHeight = parseFloat(window.getComputedStyle(document.querySelector('.disk-container')).getPropertyValue("height")) + 3;
+    
+    text.style.height = `${window.innerHeight - (controlsHeight + diskContainerHeight)}px`; 
+})
 
 function playAudio() {
     buttonState = !buttonState;

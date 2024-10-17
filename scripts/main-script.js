@@ -1,10 +1,18 @@
-window.onload = function () {
+window.addEventListener('resize', function () {
     if (window.innerHeight <= 500) {
         document.querySelector(".songs-items").style.height = `${window.innerHeight - 10}px`;
     } else {
         document.querySelector(".songs-items").style.height = `${window.innerHeight - 30}px`;
     }
-}
+})
+
+window.addEventListener('load', function () {
+    if (window.innerHeight <= 500) {
+        document.querySelector(".songs-items").style.height = `${window.innerHeight - 10}px`;
+    } else {
+        document.querySelector(".songs-items").style.height = `${window.innerHeight - 30}px`;
+    }
+})
 
 function setCookie(name, value, days) {
     let date = new Date();
