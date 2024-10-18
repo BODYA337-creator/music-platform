@@ -19,12 +19,10 @@ window.addEventListener('resize', function () {
     text.style.height = `${window.innerHeight - (controlsHeight + diskContainerHeight)}px`; 
 })
 
-window.addEventListener('load', function () {
-    const controlsHeight = parseFloat(window.getComputedStyle(document.querySelector('.controls')).getPropertyValue("height")) + 7;
-    const diskContainerHeight = parseFloat(window.getComputedStyle(document.querySelector('.disk-container')).getPropertyValue("height")) + 3;
-    
-    text.style.height = `${window.innerHeight - (controlsHeight + diskContainerHeight)}px`; 
-})
+const controlsHeight = parseFloat(window.getComputedStyle(document.querySelector('.controls')).getPropertyValue("height")) + 7;
+const diskContainerHeight = parseFloat(window.getComputedStyle(document.querySelector('.disk-container')).getPropertyValue("height")) + 3;
+
+text.style.height = `${window.innerHeight - (controlsHeight + diskContainerHeight)}px`; 
 
 function playAudio() {
     buttonState = !buttonState;
