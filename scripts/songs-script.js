@@ -8,8 +8,6 @@ const stopButton = document.querySelector("#stop-button");
 
 const playButton = document.querySelector("#play-button");
 
-// const seekBar = document.querySelector('#seekBar');
-
 let buttonState = false;
 
 window.addEventListener('resize', function () {

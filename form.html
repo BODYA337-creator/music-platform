@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Upload Form</title>
+    <link rel="stylesheet" href="styles/form-styles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Upload</h2>
+        <form id="musicForm">
+            <div class="form-group">
+                <div class="text">Song Name</div>
+                <input type="text" id="songName" name="songName" required>
+            </div>
+            <div class="form-group">
+                <div class="text">Song Author</div>
+                <input type="text" id="songAuthor" name="songAuthor" required>
+            </div>
+            <div class="form-group">
+                <div class="text">Genre</div>
+                <input type="text" id="songGenre" name="songGenre" required>
+            </div>
+            <div class="form-group">
+                <div class="text">Disk</div>
+                <label for="songDisk">Choose a file</label>
+                <input type="file" id="songDisk" name="songDisk" accept=".mp3, .wav">
+            </div>
+            <div class="form-group">
+                <div class="text">Обложка песни</div>
+                <label for="songCover">Choose a file</label>
+                <input type="file" id="songCover" name="songCover" accept="image/*" required>
+            </div>
+            <button type="submit" class="submit-btn">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
