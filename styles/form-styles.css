@@ -37,7 +37,7 @@ body {
     color: #555;
 }
 
-.form-group:nth-child(4) label, .form-group:nth-child(5) label {
+.form-group:nth-child(4) label, .form-group:nth-child(5) label, .form-group:nth-child(6) label {
     display: block;
     width: 93%;
     padding: 10px;
